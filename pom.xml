@@ -229,6 +229,8 @@
             <groupId>com.amazon.sellingpartnerapi</groupId>
             <artifactId>sellingpartnerapi-aa-java</artifactId>
             <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/sellingpartnerapi-aa-java-1.0.jar</systemPath>
         </dependency>
     </dependencies>
     <properties>
