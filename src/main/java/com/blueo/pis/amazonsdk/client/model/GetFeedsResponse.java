@@ -15,7 +15,7 @@ package com.blueo.pis.amazonsdk.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.blueo.pis.amazonsdk.client.model.Error;
+import com.blueo.pis.amazonsdk.client.model.FeedList;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -24,39 +24,53 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * A list of error responses returned when a request is unsuccessful.
+ * Response schema.
  */
-@ApiModel(description = "A list of error responses returned when a request is unsuccessful.")
+@ApiModel(description = "Response schema.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-03T18:21:37.837+08:00")
-public class ErrorList {
-  @SerializedName("errors")
-  private List<Error> errors = new ArrayList<Error>();
+public class GetFeedsResponse {
+  @SerializedName("feeds")
+  private FeedList feeds = null;
 
-  public ErrorList errors(List<Error> errors) {
-    this.errors = errors;
-    return this;
-  }
+  @SerializedName("nextToken")
+  private String nextToken = null;
 
-  public ErrorList addErrorsItem(Error errorsItem) {
-    this.errors.add(errorsItem);
+  public GetFeedsResponse feeds(FeedList feeds) {
+    this.feeds = feeds;
     return this;
   }
 
    /**
-   * Get errors
-   * @return errors
+   * The feeds.
+   * @return feeds
   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<Error> getErrors() {
-    return errors;
+  @ApiModelProperty(required = true, value = "The feeds.")
+  public FeedList getFeeds() {
+    return feeds;
   }
 
-  public void setErrors(List<Error> errors) {
-    this.errors = errors;
+  public void setFeeds(FeedList feeds) {
+    this.feeds = feeds;
+  }
+
+  public GetFeedsResponse nextToken(String nextToken) {
+    this.nextToken = nextToken;
+    return this;
+  }
+
+   /**
+   * Returned when the number of results exceeds pageSize. To get the next page of results, call the getFeeds operation with this token as the only parameter.
+   * @return nextToken
+  **/
+  @ApiModelProperty(value = "Returned when the number of results exceeds pageSize. To get the next page of results, call the getFeeds operation with this token as the only parameter.")
+  public String getNextToken() {
+    return nextToken;
+  }
+
+  public void setNextToken(String nextToken) {
+    this.nextToken = nextToken;
   }
 
 
@@ -68,22 +82,24 @@ public class ErrorList {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ErrorList errorList = (ErrorList) o;
-    return Objects.equals(this.errors, errorList.errors);
+    GetFeedsResponse getFeedsResponse = (GetFeedsResponse) o;
+    return Objects.equals(this.feeds, getFeedsResponse.feeds) &&
+        Objects.equals(this.nextToken, getFeedsResponse.nextToken);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errors);
+    return Objects.hash(feeds, nextToken);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ErrorList {\n");
+    sb.append("class GetFeedsResponse {\n");
     
-    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("    feeds: ").append(toIndentedString(feeds)).append("\n");
+    sb.append("    nextToken: ").append(toIndentedString(nextToken)).append("\n");
     sb.append("}");
     return sb.toString();
   }
