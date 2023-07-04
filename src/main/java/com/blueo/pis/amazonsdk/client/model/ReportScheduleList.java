@@ -15,7 +15,7 @@ package com.blueo.pis.amazonsdk.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.blueo.pis.amazonsdk.client.model.Error;
+import com.blueo.pis.amazonsdk.client.model.ReportSchedule;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,35 +28,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A list of error responses returned when a request is unsuccessful.
+ * A list of report schedules.
  */
-@ApiModel(description = "A list of error responses returned when a request is unsuccessful.")
+@ApiModel(description = "A list of report schedules.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-04T10:28:20.324+08:00")
-public class ErrorList {
-  @SerializedName("errors")
-  private List<Error> errors = new ArrayList<Error>();
+public class ReportScheduleList {
+  @SerializedName("reportSchedules")
+  private List<ReportSchedule> reportSchedules = new ArrayList<ReportSchedule>();
 
-  public ErrorList errors(List<Error> errors) {
-    this.errors = errors;
+  public ReportScheduleList reportSchedules(List<ReportSchedule> reportSchedules) {
+    this.reportSchedules = reportSchedules;
     return this;
   }
 
-  public ErrorList addErrorsItem(Error errorsItem) {
-    this.errors.add(errorsItem);
+  public ReportScheduleList addReportSchedulesItem(ReportSchedule reportSchedulesItem) {
+    this.reportSchedules.add(reportSchedulesItem);
     return this;
   }
 
    /**
-   * Get errors
-   * @return errors
+   * Get reportSchedules
+   * @return reportSchedules
   **/
   @ApiModelProperty(required = true, value = "")
-  public List<Error> getErrors() {
-    return errors;
+  public List<ReportSchedule> getReportSchedules() {
+    return reportSchedules;
   }
 
-  public void setErrors(List<Error> errors) {
-    this.errors = errors;
+  public void setReportSchedules(List<ReportSchedule> reportSchedules) {
+    this.reportSchedules = reportSchedules;
   }
 
 
@@ -68,22 +68,22 @@ public class ErrorList {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ErrorList errorList = (ErrorList) o;
-    return Objects.equals(this.errors, errorList.errors);
+    ReportScheduleList reportScheduleList = (ReportScheduleList) o;
+    return Objects.equals(this.reportSchedules, reportScheduleList.reportSchedules);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errors);
+    return Objects.hash(reportSchedules);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ErrorList {\n");
+    sb.append("class ReportScheduleList {\n");
     
-    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("    reportSchedules: ").append(toIndentedString(reportSchedules)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -1,6 +1,6 @@
 /*
- * Selling Partner API for Feeds
- * The Selling Partner API for Feeds lets you upload data to Amazon on behalf of a selling partner.
+ * Selling Partner API for Reports
+ * The Selling Partner API for Reports lets you retrieve and manage a variety of reports that can help selling partners manage their businesses.
  *
  * OpenAPI spec version: 2021-06-30
  * 
@@ -13,7 +13,7 @@
 
 package com.blueo.pis.amazonsdk.client;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-03T18:21:37.837+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-04T10:28:20.324+08:00")
 public class Pair {
     private String name = "";
     private String value = "";

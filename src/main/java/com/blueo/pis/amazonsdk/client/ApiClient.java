@@ -1,6 +1,6 @@
 /*
- * Selling Partner API for Feeds
- * The Selling Partner API for Feeds lets you upload data to Amazon on behalf of a selling partner.
+ * Selling Partner API for Reports
+ * The Selling Partner API for Reports lets you retrieve and manage a variety of reports that can help selling partners manage their businesses.
  *
  * OpenAPI spec version: 2021-06-30
  * 
