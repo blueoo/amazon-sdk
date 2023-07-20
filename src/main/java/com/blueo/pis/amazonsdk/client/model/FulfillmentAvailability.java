@@ -15,7 +15,6 @@ package com.blueo.pis.amazonsdk.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.blueo.pis.amazonsdk.client.model.Error;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -24,39 +23,54 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * A list of error responses returned when a request is unsuccessful.
+ * Fulfillment availability details for the listings item.
  */
-@ApiModel(description = "A list of error responses returned when a request is unsuccessful.")
+@ApiModel(description = "Fulfillment availability details for the listings item.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T16:08:27.766+08:00")
-public class ErrorList {
-  @SerializedName("errors")
-  private List<Error> errors = new ArrayList<Error>();
+public class FulfillmentAvailability {
+  @SerializedName("fulfillmentChannelCode")
+  private String fulfillmentChannelCode = null;
 
-  public ErrorList errors(List<Error> errors) {
-    this.errors = errors;
-    return this;
-  }
+  @SerializedName("quantity")
+  private Integer quantity = null;
 
-  public ErrorList addErrorsItem(Error errorsItem) {
-    this.errors.add(errorsItem);
+  public FulfillmentAvailability fulfillmentChannelCode(String fulfillmentChannelCode) {
+    this.fulfillmentChannelCode = fulfillmentChannelCode;
     return this;
   }
 
    /**
-   * Get errors
-   * @return errors
+   * Designates which fulfillment network will be used.
+   * @return fulfillmentChannelCode
   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<Error> getErrors() {
-    return errors;
+  @ApiModelProperty(required = true, value = "Designates which fulfillment network will be used.")
+  public String getFulfillmentChannelCode() {
+    return fulfillmentChannelCode;
   }
 
-  public void setErrors(List<Error> errors) {
-    this.errors = errors;
+  public void setFulfillmentChannelCode(String fulfillmentChannelCode) {
+    this.fulfillmentChannelCode = fulfillmentChannelCode;
+  }
+
+  public FulfillmentAvailability quantity(Integer quantity) {
+    this.quantity = quantity;
+    return this;
+  }
+
+   /**
+   * The quantity of the item you are making available for sale.
+   * minimum: 0
+   * @return quantity
+  **/
+  @ApiModelProperty(value = "The quantity of the item you are making available for sale.")
+  public Integer getQuantity() {
+    return quantity;
+  }
+
+  public void setQuantity(Integer quantity) {
+    this.quantity = quantity;
   }
 
 
@@ -68,22 +82,24 @@ public class ErrorList {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ErrorList errorList = (ErrorList) o;
-    return Objects.equals(this.errors, errorList.errors);
+    FulfillmentAvailability fulfillmentAvailability = (FulfillmentAvailability) o;
+    return Objects.equals(this.fulfillmentChannelCode, fulfillmentAvailability.fulfillmentChannelCode) &&
+        Objects.equals(this.quantity, fulfillmentAvailability.quantity);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errors);
+    return Objects.hash(fulfillmentChannelCode, quantity);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ErrorList {\n");
+    sb.append("class FulfillmentAvailability {\n");
     
-    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("    fulfillmentChannelCode: ").append(toIndentedString(fulfillmentChannelCode)).append("\n");
+    sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
     sb.append("}");
     return sb.toString();
   }

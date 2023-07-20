@@ -15,7 +15,7 @@ package com.blueo.pis.amazonsdk.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.blueo.pis.amazonsdk.client.model.Error;
+import com.blueo.pis.amazonsdk.client.model.Money;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -24,39 +24,32 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * A list of error responses returned when a request is unsuccessful.
+ * Vendor procurement information for the listings item.
  */
-@ApiModel(description = "A list of error responses returned when a request is unsuccessful.")
+@ApiModel(description = "Vendor procurement information for the listings item.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T16:08:27.766+08:00")
-public class ErrorList {
-  @SerializedName("errors")
-  private List<Error> errors = new ArrayList<Error>();
+public class ItemProcurement {
+  @SerializedName("costPrice")
+  private Money costPrice = null;
 
-  public ErrorList errors(List<Error> errors) {
-    this.errors = errors;
-    return this;
-  }
-
-  public ErrorList addErrorsItem(Error errorsItem) {
-    this.errors.add(errorsItem);
+  public ItemProcurement costPrice(Money costPrice) {
+    this.costPrice = costPrice;
     return this;
   }
 
    /**
-   * Get errors
-   * @return errors
+   * The price (numeric value) that you want Amazon to pay you for this product.
+   * @return costPrice
   **/
-  @ApiModelProperty(required = true, value = "")
-  public List<Error> getErrors() {
-    return errors;
+  @ApiModelProperty(required = true, value = "The price (numeric value) that you want Amazon to pay you for this product.")
+  public Money getCostPrice() {
+    return costPrice;
   }
 
-  public void setErrors(List<Error> errors) {
-    this.errors = errors;
+  public void setCostPrice(Money costPrice) {
+    this.costPrice = costPrice;
   }
 
 
@@ -68,22 +61,22 @@ public class ErrorList {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ErrorList errorList = (ErrorList) o;
-    return Objects.equals(this.errors, errorList.errors);
+    ItemProcurement itemProcurement = (ItemProcurement) o;
+    return Objects.equals(this.costPrice, itemProcurement.costPrice);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errors);
+    return Objects.hash(costPrice);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ErrorList {\n");
+    sb.append("class ItemProcurement {\n");
     
-    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("    costPrice: ").append(toIndentedString(costPrice)).append("\n");
     sb.append("}");
     return sb.toString();
   }

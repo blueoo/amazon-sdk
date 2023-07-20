@@ -4,9 +4,10 @@ All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteListingsItem**](ListingsApi.md#deleteListingsItem) | **DELETE** /listings/2020-09-01/items/{sellerId}/{sku} | 
-[**patchListingsItem**](ListingsApi.md#patchListingsItem) | **PATCH** /listings/2020-09-01/items/{sellerId}/{sku} | 
-[**putListingsItem**](ListingsApi.md#putListingsItem) | **PUT** /listings/2020-09-01/items/{sellerId}/{sku} | 
+[**deleteListingsItem**](ListingsApi.md#deleteListingsItem) | **DELETE** /listings/2021-08-01/items/{sellerId}/{sku} | 
+[**getListingsItem**](ListingsApi.md#getListingsItem) | **GET** /listings/2021-08-01/items/{sellerId}/{sku} | 
+[**patchListingsItem**](ListingsApi.md#patchListingsItem) | **PATCH** /listings/2021-08-01/items/{sellerId}/{sku} | 
+[**putListingsItem**](ListingsApi.md#putListingsItem) | **PUT** /listings/2021-08-01/items/{sellerId}/{sku} | 
 
 
 <a name="deleteListingsItem"></a>
@@ -50,6 +51,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListingsItemSubmissionResponse**](ListingsItemSubmissionResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getListingsItem"></a>
+# **getListingsItem**
+> Item getListingsItem(sellerId, sku, marketplaceIds, issueLocale, includedData)
+
+
+
+Returns details about a listings item for a selling partner.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
+
+### Example
+```java
+// Import classes:
+//import com.blueo.pis.amazonsdk.client.ApiException;
+//import com.blueo.pis.amazonsdk.client.api.ListingsApi;
+
+
+ListingsApi apiInstance = new ListingsApi();
+String sellerId = "sellerId_example"; // String | A selling partner identifier, such as a merchant account or vendor code.
+String sku = "sku_example"; // String | A selling partner provided identifier for an Amazon listing.
+List<String> marketplaceIds = Arrays.asList("ATVPDKIKX0DER"); // List<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
+String issueLocale = "en_US"; // String | A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \"en_US\", \"fr_CA\", \"fr_FR\". Localized messages default to \"en_US\" when a localization is not available in the specified locale.
+List<String> includedData = Arrays.asList("summaries"); // List<String> | A comma-delimited list of data sets to include in the response. Default: summaries.
+try {
+    Item result = apiInstance.getListingsItem(sellerId, sku, marketplaceIds, issueLocale, includedData);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ListingsApi#getListingsItem");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sellerId** | **String**| A selling partner identifier, such as a merchant account or vendor code. |
+ **sku** | **String**| A selling partner provided identifier for an Amazon listing. |
+ **marketplaceIds** | [**List&lt;String&gt;**](String.md)| A comma-delimited list of Amazon marketplace identifiers for the request. |
+ **issueLocale** | **String**| A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. | [optional]
+ **includedData** | [**List&lt;String&gt;**](String.md)| A comma-delimited list of data sets to include in the response. Default: summaries. | [optional] [enum: summaries, attributes, issues, offers, fulfillmentAvailability, procurement]
+
+### Return type
+
+[**Item**](Item.md)
 
 ### Authorization
 
