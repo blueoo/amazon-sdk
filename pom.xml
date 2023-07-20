@@ -34,6 +34,13 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <version>3.0.0-M1</version>
@@ -234,8 +241,8 @@
             <groupId>com.amazon.sellingpartnerapi</groupId>
             <artifactId>sellingpartnerapi-aa-java</artifactId>
             <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/sellingpartnerapi-aa-java-1.0.jar</systemPath>
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${pom.basedir}/src/main/resources/sellingpartnerapi-aa-java-1.0.jar</systemPath>-->
         </dependency>
     </dependencies>
     <properties>
