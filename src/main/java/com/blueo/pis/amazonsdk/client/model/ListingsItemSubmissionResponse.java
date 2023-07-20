@@ -31,7 +31,7 @@ import java.util.List;
  * Response containing the results of a submission to the Selling Partner API for Listings Items.
  */
 @ApiModel(description = "Response containing the results of a submission to the Selling Partner API for Listings Items.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T16:08:27.766+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T17:51:57.349+08:00")
 public class ListingsItemSubmissionResponse {
   @SerializedName("sku")
   private String sku = null;

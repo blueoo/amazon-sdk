@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiModel;
  * JSON object containing structured listings item attribute data keyed by attribute name.
  */
 @ApiModel(description = "JSON object containing structured listings item attribute data keyed by attribute name.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T16:08:27.766+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T17:51:57.349+08:00")
 public class ItemAttributes {
 
   @Override

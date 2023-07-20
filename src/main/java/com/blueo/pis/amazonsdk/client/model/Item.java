@@ -36,7 +36,7 @@ import java.util.List;
  * A listings item.
  */
 @ApiModel(description = "A listings item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T16:08:27.766+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T17:51:57.349+08:00")
 public class Item {
   @SerializedName("sku")
   private String sku = null;

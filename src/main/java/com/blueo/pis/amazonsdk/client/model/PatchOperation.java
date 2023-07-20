@@ -30,7 +30,7 @@ import java.util.List;
  * Individual JSON Patch operation for an HTTP PATCH request.
  */
 @ApiModel(description = "Individual JSON Patch operation for an HTTP PATCH request.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T16:08:27.766+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T17:51:57.349+08:00")
 public class PatchOperation {
   /**
    * Type of JSON Patch operation. Supported JSON Patch operations include add, replace, and delete. See &lt;https://tools.ietf.org/html/rfc6902&gt;.

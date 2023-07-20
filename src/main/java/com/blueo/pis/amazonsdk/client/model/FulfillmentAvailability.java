@@ -28,7 +28,7 @@ import java.io.IOException;
  * Fulfillment availability details for the listings item.
  */
 @ApiModel(description = "Fulfillment availability details for the listings item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T16:08:27.766+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T17:51:57.349+08:00")
 public class FulfillmentAvailability {
   @SerializedName("fulfillmentChannelCode")
   private String fulfillmentChannelCode = null;
