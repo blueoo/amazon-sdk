@@ -15,16 +15,43 @@ package com.blueo.pis.amazonsdk.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.blueo.pis.amazonsdk.client.model.Money;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
-import java.util.ArrayList;
-import java.util.List;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * Vendor procurement information for the listings item.
  */
 @ApiModel(description = "Vendor procurement information for the listings item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T17:51:57.349+08:00")
-public class ItemProcurement extends ArrayList<ERRORUNKNOWN> {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T17:59:50.681+08:00")
+public class ItemProcurement {
+  @SerializedName("costPrice")
+  private Money costPrice = null;
+
+  public ItemProcurement costPrice(Money costPrice) {
+    this.costPrice = costPrice;
+    return this;
+  }
+
+   /**
+   * The price (numeric value) that you want Amazon to pay you for this product.
+   * @return costPrice
+  **/
+  @ApiModelProperty(required = true, value = "The price (numeric value) that you want Amazon to pay you for this product.")
+  public Money getCostPrice() {
+    return costPrice;
+  }
+
+  public void setCostPrice(Money costPrice) {
+    this.costPrice = costPrice;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -34,12 +61,13 @@ public class ItemProcurement extends ArrayList<ERRORUNKNOWN> {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    ItemProcurement itemProcurement = (ItemProcurement) o;
+    return Objects.equals(this.costPrice, itemProcurement.costPrice);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(costPrice);
   }
 
 
@@ -47,7 +75,8 @@ public class ItemProcurement extends ArrayList<ERRORUNKNOWN> {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ItemProcurement {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
+    sb.append("    costPrice: ").append(toIndentedString(costPrice)).append("\n");
     sb.append("}");
     return sb.toString();
   }

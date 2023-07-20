@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Summary details of a listings item for an Amazon marketplace.
  */
 @ApiModel(description = "Summary details of a listings item for an Amazon marketplace.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T17:51:57.349+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T17:59:50.681+08:00")
 public class ItemSummaryByMarketplace {
   @SerializedName("marketplaceId")
   private String marketplaceId = null;

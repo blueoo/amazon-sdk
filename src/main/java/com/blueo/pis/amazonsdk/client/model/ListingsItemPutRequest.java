@@ -28,7 +28,7 @@ import java.io.IOException;
  * The request body schema for the putListingsItem operation.
  */
 @ApiModel(description = "The request body schema for the putListingsItem operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T17:51:57.349+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-20T17:59:50.681+08:00")
 public class ListingsItemPutRequest {
   @SerializedName("productType")
   private String productType = null;
