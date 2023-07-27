@@ -28,9 +28,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.blueo.pis.amazonsdk.client.model.ErrorList;
-import com.blueo.pis.amazonsdk.client.model.Item;
-import com.blueo.pis.amazonsdk.client.model.ItemSearchResults;
+import com.blueo.pis.amazonsdk.model.catalog.ErrorList;
+import com.blueo.pis.amazonsdk.model.catalog.Item;
+import com.blueo.pis.amazonsdk.model.catalog.ItemSearchResults;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

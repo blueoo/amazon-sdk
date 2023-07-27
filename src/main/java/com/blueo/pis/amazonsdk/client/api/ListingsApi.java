@@ -28,11 +28,11 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.blueo.pis.amazonsdk.client.model.ErrorList;
-import com.blueo.pis.amazonsdk.client.model.Item;
-import com.blueo.pis.amazonsdk.client.model.ListingsItemPatchRequest;
-import com.blueo.pis.amazonsdk.client.model.ListingsItemPutRequest;
-import com.blueo.pis.amazonsdk.client.model.ListingsItemSubmissionResponse;
+import com.blueo.pis.amazonsdk.model.listings.ErrorList;
+import com.blueo.pis.amazonsdk.model.listings.Item;
+import com.blueo.pis.amazonsdk.model.listings.ListingsItemPatchRequest;
+import com.blueo.pis.amazonsdk.model.listings.ListingsItemPutRequest;
+import com.blueo.pis.amazonsdk.model.listings.ListingsItemSubmissionResponse;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

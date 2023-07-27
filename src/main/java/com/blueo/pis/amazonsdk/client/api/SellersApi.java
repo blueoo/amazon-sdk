@@ -28,7 +28,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.blueo.pis.amazonsdk.client.model.GetMarketplaceParticipationsResponse;
+import com.blueo.pis.amazonsdk.model.sellers.GetMarketplaceParticipationsResponse;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
