@@ -14,14 +14,9 @@
 package com.blueo.pis.amazonsdk.client.api;
 
 import com.blueo.pis.amazonsdk.client.ApiException;
-import com.blueo.pis.amazonsdk.client.model.GetAuthorizationCodeResponse;
+import com.blueo.pis.amazonsdk.model.authorization.GetAuthorizationCodeResponse;
 import org.junit.Test;
 import org.junit.Ignore;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for AuthorizationApi

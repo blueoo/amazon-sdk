@@ -14,16 +14,12 @@
 package com.blueo.pis.amazonsdk.client.api;
 
 import com.blueo.pis.amazonsdk.client.ApiException;
-import com.blueo.pis.amazonsdk.client.model.ErrorList;
-import com.blueo.pis.amazonsdk.client.model.ProductTypeDefinition;
-import com.blueo.pis.amazonsdk.client.model.ProductTypeList;
+import com.blueo.pis.amazonsdk.model.definitions.ProductTypeDefinition;
+import com.blueo.pis.amazonsdk.model.definitions.ProductTypeList;
 import org.junit.Test;
 import org.junit.Ignore;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for DefinitionsApi

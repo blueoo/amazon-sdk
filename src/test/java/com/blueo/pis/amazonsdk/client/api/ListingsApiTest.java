@@ -14,17 +14,13 @@
 package com.blueo.pis.amazonsdk.client.api;
 
 import com.blueo.pis.amazonsdk.client.ApiException;
-import com.blueo.pis.amazonsdk.client.model.ErrorList;
-import com.blueo.pis.amazonsdk.client.model.ListingsItemPatchRequest;
-import com.blueo.pis.amazonsdk.client.model.ListingsItemPutRequest;
-import com.blueo.pis.amazonsdk.client.model.ListingsItemSubmissionResponse;
+import com.blueo.pis.amazonsdk.model.listings.ListingsItemPatchRequest;
+import com.blueo.pis.amazonsdk.model.listings.ListingsItemPutRequest;
+import com.blueo.pis.amazonsdk.model.listings.ListingsItemSubmissionResponse;
 import org.junit.Test;
 import org.junit.Ignore;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for ListingsApi

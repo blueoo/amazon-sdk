@@ -14,24 +14,12 @@
 package com.blueo.pis.amazonsdk.client.api;
 
 import com.blueo.pis.amazonsdk.client.ApiException;
-import com.blueo.pis.amazonsdk.client.model.CreateReportResponse;
-import com.blueo.pis.amazonsdk.client.model.CreateReportScheduleResponse;
-import com.blueo.pis.amazonsdk.client.model.CreateReportScheduleSpecification;
-import com.blueo.pis.amazonsdk.client.model.CreateReportSpecification;
-import com.blueo.pis.amazonsdk.client.model.ErrorList;
-import com.blueo.pis.amazonsdk.client.model.GetReportsResponse;
+import com.blueo.pis.amazonsdk.model.reports.*;
 import org.threeten.bp.OffsetDateTime;
-import com.blueo.pis.amazonsdk.client.model.Report;
-import com.blueo.pis.amazonsdk.client.model.ReportDocument;
-import com.blueo.pis.amazonsdk.client.model.ReportSchedule;
-import com.blueo.pis.amazonsdk.client.model.ReportScheduleList;
 import org.junit.Test;
 import org.junit.Ignore;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for ReportsApi

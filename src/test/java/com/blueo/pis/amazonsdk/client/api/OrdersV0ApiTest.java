@@ -14,24 +14,11 @@
 package com.blueo.pis.amazonsdk.client.api;
 
 import com.blueo.pis.amazonsdk.client.ApiException;
-import com.blueo.pis.amazonsdk.client.model.ConfirmShipmentErrorResponse;
-import com.blueo.pis.amazonsdk.client.model.ConfirmShipmentRequest;
-import com.blueo.pis.amazonsdk.client.model.GetOrderAddressResponse;
-import com.blueo.pis.amazonsdk.client.model.GetOrderBuyerInfoResponse;
-import com.blueo.pis.amazonsdk.client.model.GetOrderItemsBuyerInfoResponse;
-import com.blueo.pis.amazonsdk.client.model.GetOrderItemsResponse;
-import com.blueo.pis.amazonsdk.client.model.GetOrderRegulatedInfoResponse;
-import com.blueo.pis.amazonsdk.client.model.GetOrderResponse;
-import com.blueo.pis.amazonsdk.client.model.GetOrdersResponse;
-import com.blueo.pis.amazonsdk.client.model.UpdateVerificationStatusErrorResponse;
-import com.blueo.pis.amazonsdk.client.model.UpdateVerificationStatusRequest;
+import com.blueo.pis.amazonsdk.model.orders.*;
 import org.junit.Test;
 import org.junit.Ignore;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for OrdersV0Api

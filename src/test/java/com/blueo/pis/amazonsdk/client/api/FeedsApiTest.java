@@ -14,22 +14,12 @@
 package com.blueo.pis.amazonsdk.client.api;
 
 import com.blueo.pis.amazonsdk.client.ApiException;
-import com.blueo.pis.amazonsdk.client.model.CreateFeedDocumentResponse;
-import com.blueo.pis.amazonsdk.client.model.CreateFeedDocumentSpecification;
-import com.blueo.pis.amazonsdk.client.model.CreateFeedResponse;
-import com.blueo.pis.amazonsdk.client.model.CreateFeedSpecification;
-import com.blueo.pis.amazonsdk.client.model.ErrorList;
-import com.blueo.pis.amazonsdk.client.model.Feed;
-import com.blueo.pis.amazonsdk.client.model.FeedDocument;
-import com.blueo.pis.amazonsdk.client.model.GetFeedsResponse;
+import com.blueo.pis.amazonsdk.model.feeds.*;
 import org.threeten.bp.OffsetDateTime;
 import org.junit.Test;
 import org.junit.Ignore;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for FeedsApi
